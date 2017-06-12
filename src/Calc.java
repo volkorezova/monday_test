@@ -3,15 +3,22 @@
  */
 public class Calc {
 
-public void sum(int operan1, int operan2){
+public void sum(int operand1, int operand2){
  /**
   *@param operan1
   *@param operan2
   *
   *
   */
-    int tempResult = operan1+operan2;
-    System.out.println("Result"+operan2+"+"+operan2+" = "+ tempResult);
+    int tempResult = operand1+operand2;
+    System.out.println("Result "+operand1+"+"+operand2+" = "+ tempResult);
+
+}
+
+public void sum(String operand1, int operand2){
+
+    String tempResult = operand1+operand2;
+    System.out.println("Result "+operand1+"+"+operand2+" = "+ tempResult);
 
 
 
