@@ -14,9 +14,20 @@ public class TestOutput {
 
         System.out.println(var1 + " "+varString+" "+ var2);
 
+        Calc calc = new Calc();
+        calc.sum(10,10);
+
+
+
         int rez_1 = var1+var2;
         System.out.println("Rez1 = "+rez_1);
+        Integer var3 = 33;
+        System.out.println(var3);
 
+        System.out.println("Result = "+ var1+ var2+var3);
+
+        int rez_11 = var1+ var3;
+        System.out.println("Rez_2 =  "+rez_11);
 
 
     }
