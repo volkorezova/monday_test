@@ -17,7 +17,7 @@ public class TestOutput {
         Calc calc = new Calc();
         calc.sum(var1,var2);
         calc.sum("test", 11);
-        
+
         Integer var3 = 33;
         System.out.println(var3);
         calc.sum(var1,var3);
