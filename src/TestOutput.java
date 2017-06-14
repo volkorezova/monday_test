@@ -29,6 +29,9 @@ public class TestOutput {
         int rez_11 = var1+ var3;
         System.out.println("Rez_2 =  "+rez_11);
 
+        calc.mult(2,5);
+        calc.sum(calc.mult(2,5), 5);
+
 
     }
 
