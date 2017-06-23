@@ -1,12 +1,11 @@
-import libs.Calc;
-import libs.FullCalc;
+import libs.*;
 
 
 public class TestOutput {
 
-    public static void main(String arg[]){
+    public static void main(String arg[]) {
 
-     //   System.out.println("Hello");
+        //   System.out.println("Hello");
 
 //        mult(5,6);
 //        mult (4,3);
@@ -19,7 +18,7 @@ public class TestOutput {
 //
 //        System.out.println(var1 + " "+varString+" "+ var2);
 
-   Calc calc = new Calc();
+        Calc calc = new Calc();
 //        calc.sum(var1,var2);
 //        calc.sum("test", 11);
 //
@@ -50,10 +49,10 @@ public class TestOutput {
 //        calc.sum(2, "Kapec");
 //        calc.subtraction(2,9);
 
-       // calc.division(3,2);
-       // calc.division(8,1);
+        // calc.division(3,2);
+        // calc.division(8,1);
 
-       // calc.division(7.8,2);
+        // calc.division(7.8,2);
 //
 //        calc.divisionWithByte(466, 0);
 //        calc.divisionWithByte(900000001,2);
@@ -61,14 +60,12 @@ public class TestOutput {
 
 //        String student = "Taras";
 //
-//        String[] studentArray = {"Taras", "Stas", "Den"};
+// String[] studentArray = {"Taras", "Stas", "Den"};
 //        System.out.println("Element of array" + studentArray[2]);
 
 
+        // System.out.println("Size "+ intArray.length);
 
-       // System.out.println("Size "+ intArray.length);
-
-        //String []intArrayNew = new String[100];
 
 //        if (intArray[0]<10){
 //
@@ -83,10 +80,12 @@ public class TestOutput {
 //            System.out.println(intArray[0] +"  > 10");
 
 
-        int[] intArrayForCheck = {2,4,26,28,10,20,33};
+        int[] intArrayForCheck = {2, 4, 26, 28, 10, 20, 33};
 
         FullCalc fullCalc = new FullCalc();
         fullCalc.printArrayWithConditions(intArrayForCheck);
+        fullCalc.printArrayWithCondition(intArrayForCheck, 10);
+
 
 //            for (int i=0; i<intArray.length; i++){
 //
@@ -109,7 +108,56 @@ public class TestOutput {
 //
 //
 //                }
-            }
+
+
+//zapolnenie massiva bustro
+        String[] stringArrayNew = new String[100];
+        for (int i = 0; i < 100; i++) {
+            stringArrayNew[i] = "test" + i;
+            System.out.println(stringArrayNew[i]);
+        }
+
+        System.out.println();
+
+
+        Dollar dollar = new Dollar(26.15, 1.1);
+        dollar.getKursNBU();
+        dollar.setKursNBU(27);
+        dollar.getKursNBU();
+
+
+        Euro euro = new Euro(30.0, 1.2);
+        euro.getKursNBU();
+        euro.setKursNBU(31.9);
+        euro.getKursNBU();
+
+
+        dollar.exchangeToUAH(1000);
+        euro.exchangeToUAH(1000);
+
+        System.out.println("Dolar -> " + dollar.freeExchange());
+        System.out.println("Euro -> " + euro.freeExchange());
+
+
+
+
+        Matrix matrix = new Matrix();
+        System.out.println("Matrix with null");
+        matrix.displayMatrix(5, matrix.matrixWithNull(5));
+        System.out.println();
+
+        matrix.fillWithOneByDiagonSpravaNalevo(5, matrix.matrixWithNull(5) );
+        System.out.println();
+
+        matrix.fillWithOneByDiagonSlevaNapravo(5,matrix.matrixWithNull(5));
+        System.out.println();
+
+        Factorial.factorial(3);
+
+
+
+    }
+}
 
 
 
@@ -117,7 +165,9 @@ public class TestOutput {
 
 
 
-                }
+
+
+
 
 
 
