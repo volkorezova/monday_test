@@ -1,0 +1,25 @@
+2017-26-06 20:50:06  ERROR [TestOutput] : Error info
+2017-26-06 20:50:06   INFO [TestOutput] : Info
+2017-26-06 21:07:57  DEBUG [TestOutput] : Debug Info
+2017-26-06 21:07:57  ERROR [TestOutput] : Error info
+2017-26-06 21:07:57   INFO [TestOutput] : Info
+2017-26-06 21:09:20  ERROR [TestOutput] : Error info
+2017-26-06 21:09:20   INFO [TestOutput] : Info
+2017-29-06 18:55:15  ERROR [TestOutput] : Error info
+2017-29-06 18:55:15   INFO [TestOutput] : Info
+2017-29-06 19:15:17   INFO [libs.FullCalc] : 2 - Less than 10
+2017-29-06 19:15:17   INFO [libs.FullCalc] : 4 - Less than 10
+2017-29-06 19:15:17   INFO [libs.FullCalc] : 26 > 10
+2017-29-06 19:15:17   INFO [libs.FullCalc] : 28 > 10
+2017-29-06 19:15:17   INFO [libs.FullCalc] : 10 == 10
+2017-29-06 19:15:17   INFO [libs.FullCalc] : 20 > 10
+2017-29-06 19:15:17   INFO [libs.FullCalc] : 33 > 10
+2017-29-06 19:15:17   INFO [libs.FullCalc] : 2 - Less than intCondition
+2017-29-06 19:15:17   INFO [libs.FullCalc] : 4 - Less than intCondition
+2017-29-06 19:15:17   INFO [libs.FullCalc] : 26 > intCondition
+2017-29-06 19:15:17   INFO [libs.FullCalc] : 28 > intCondition
+2017-29-06 19:15:17   INFO [libs.FullCalc] : 10 == intCondition
+2017-29-06 19:15:17   INFO [libs.FullCalc] : 20 > intCondition
+2017-29-06 19:15:17   INFO [libs.FullCalc] : 33 > intCondition
+2017-29-06 19:15:17  ERROR [TestOutput] : Error info
+2017-29-06 19:15:17   INFO [TestOutput] : Info

@@ -1,5 +1,7 @@
 package libs;
 
+import org.apache.log4j.Logger;
+
 /**
  * Created by tatyanavolkorezova on 21.06.17.
  */
@@ -10,6 +12,7 @@ abstract public class Currency {//может иметь как абстракн�
     private double kursNBU;//свойство нашего класса
     private double marging;
 
+    public static Logger logger = Logger.getLogger(Currency.class);
 
     public Currency(double kursNBU, double marging){
         this.kursNBU = kursNBU;// в конструкторе научили обьяек задавать свойство
@@ -18,13 +21,13 @@ abstract public class Currency {//может иметь как абстракн�
 
     public double getKursNBU(){
 
-        System.out.println("KursNBU =  "+kursNBU);
+        logger.info("KursNBU =  "+kursNBU);
         return kursNBU;
     }
 
     public void setKursNBU(double newKursNBU){
         kursNBU = newKursNBU;
-        System.out.println("New kursNBU "+ newKursNBU+ " was set");
+        logger.info("New kursNBU "+ newKursNBU+ " was set");
 
     }
 
@@ -39,7 +42,7 @@ abstract public class Currency {//может иметь как абстракн�
 
     public double exchangeToUAH(double amount){
         double result = (kursNBU*marging)*amount;
-        System.out.println("You can got "+ result +" for your "+ amount);
+        logger.info("You can got "+ result +" for your "+ amount);
         return result;
     }
 

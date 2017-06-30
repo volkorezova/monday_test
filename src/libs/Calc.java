@@ -1,9 +1,13 @@
 package libs;
 
+
+import org.apache.log4j.Logger;
+
 /**
  * Created by tatyanavolkorezova on 12.06.17.
  */
 public class Calc {
+    public static Logger logger = Logger.getLogger(Calc.class);
 
     public void sum(int operand1, int operand2) {
         /**
@@ -13,14 +17,14 @@ public class Calc {
          *
          */
         int tempResult = operand1 + operand2;
-        System.out.println("Result " + operand1 + "+" + operand2 + " = " + tempResult);
+        logger.info("Result " + operand1 + "+" + operand2 + " = " + tempResult);
 
     }
 
     public void sum(String operand1, int operand2) {
 
         String tempResult = operand1 + operand2;
-        System.out.println("Result " + operand1 + "+" + operand2 + " = " + tempResult);
+        logger.info("Result " + operand1 + "+" + operand2 + " = " + tempResult);
 
 
     }
@@ -29,7 +33,7 @@ public class Calc {
     public void sum(int operand1, String operand2) {
 
         String tempResult = operand1 + operand2;
-        System.out.println("Result: " + operand1 + "+" + operand2 + "=" + tempResult);
+        logger.info("Result: " + operand1 + "+" + operand2 + "=" + tempResult);
 
     }
 
@@ -39,14 +43,14 @@ public class Calc {
     public void subtraction(int operand2, int operand3) {
 
         int tempResult = operand2 - operand3;
-        System.out.println("Result: " + operand2 + "-" + operand3 + "=" + tempResult);
+        logger.info("Result: " + operand2 + "-" + operand3 + "=" + tempResult);
 
 
     }
 
     public static int mult(int operand1, int operand2) {
         int tempResult = operand1 * operand2;
-        System.out.println("Result:" + tempResult);
+        logger.info("Result:" + tempResult);
         return tempResult;
     }
 
@@ -63,12 +67,12 @@ public class Calc {
 
             return Integer.parseInt(operand1) + operand2;
         } catch (NumberFormatException e) {
-            System.out.println("LONG FORMAT" + operand1);
+            logger.error("LONG FORMAT" + operand1);
             return 888888;
 
         } catch (Exception e) {
 
-            System.out.println("ERROR" + e);
+            logger.error("ERROR" + e);
             return 99999;
         }
     }
@@ -87,7 +91,7 @@ public class Calc {
             c = a / b;
             System.out.println("Result  int/int:" + c);
         } catch (ArithmeticException e) {
-            System.out.println("Exception - we can't divide on zero: " + e);
+            logger.error("Exception - we can't divide on zero: " + e);
             return 888;
         }
         return c;
@@ -98,7 +102,7 @@ public class Calc {
 
         double c;
         c = a / b;
-        System.out.println("Result div double/int: " + c);
+        logger.info("Result div double/int: " + c);
         return c;
     }
 
@@ -108,49 +112,48 @@ public class Calc {
         try {
             c = (a / b);
             if ((c < -128) || (c > 127)) {
-                System.out.println("Result is over the area: " + (byte) c);
+                logger.info("Result is over the area: " + (byte) c);
             } else {
-                System.out.println("Result int/int in bytes: " + (byte) c);
+                logger.info("Result int/int in bytes: " + (byte) c);
             }
         } catch (ArithmeticException e) {
-            System.out.println("Exception - we can't divide on zero: " + e);
+            logger.error("Exception - we can't divide on zero: " + e);
             return 88;
         } catch (Exception e) {
-            System.out.println("ERROR" + e);
+            logger.error("ERROR" + e);
             return 99;
         }
         return (byte) c;
     }
 
 
-//    public byte divisionIntToInt(int operand1, int operand2) {
-//
-//        try {
-//
-//            byte result = Byte.parseByte(String.valueOf(operand1 / operand2));
-//            return result;
-//
-//        } catch (NumberFormatException e) {
-//
-//            System.out.println("OUT of range");
-//            return 99;
-//        } catch (ArithmeticException e) {
-//
-//
-//            System.out.println("Нельзя делить на ноль");
-//            return 77;
-//
-//        } catch (Exception e) {
-//
-//            System.out.println("ERROR " + e);
-//            return 77;
-//
-//        }
-//
+    public byte divisionIntToInt(int operand1, int operand2) {
+
+        try {
+
+            byte result = Byte.parseByte(String.valueOf(operand1 / operand2));
+            logger.info(result);
+            return result;
+
+        } catch (NumberFormatException e) {
+
+            logger.error("OUT of range");
+            return 99;
+        } catch (ArithmeticException e) {
 
 
+            logger.error("Нельзя делить на ноль");
+            return 77;
+
+        } catch (Exception e) {
+
+            logger.error("ERROR " + e);
+            return 77;
+
+        }
 
 
+    }
 
 }
 

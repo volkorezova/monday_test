@@ -1,4 +1,6 @@
-import libs.*;
+import libs.Calc;
+import libs.FullCalc;
+import org.apache.log4j.Logger;
 
 
 public class TestOutput {
@@ -111,48 +113,80 @@ public class TestOutput {
 
 
 //zapolnenie massiva bustro
-        String[] stringArrayNew = new String[100];
-        for (int i = 0; i < 100; i++) {
-            stringArrayNew[i] = "test" + i;
-            System.out.println(stringArrayNew[i]);
-        }
-
-        System.out.println();
-
-
-        Dollar dollar = new Dollar(26.15, 1.1);
-        dollar.getKursNBU();
-        dollar.setKursNBU(27);
-        dollar.getKursNBU();
-
-
-        Euro euro = new Euro(30.0, 1.2);
-        euro.getKursNBU();
-        euro.setKursNBU(31.9);
-        euro.getKursNBU();
-
-
-        dollar.exchangeToUAH(1000);
-        euro.exchangeToUAH(1000);
-
-        System.out.println("Dolar -> " + dollar.freeExchange());
-        System.out.println("Euro -> " + euro.freeExchange());
-
-
+//        String[] stringArrayNew = new String[100];
+//        for (int i = 0; i < 100; i++) {
+//            stringArrayNew[i] = "test" + i;
+//            System.out.println(stringArrayNew[i]);
+//        }
+//
+//        System.out.println();
+//
+//
+//        Dollar dollar = new Dollar(26.15, 1.1);
+//        dollar.getKursNBU();
+//        dollar.setKursNBU(27);
+//        dollar.getKursNBU();
+//
+//
+//        Euro euro = new Euro(30.0, 1.2);
+//        euro.getKursNBU();
+//        euro.setKursNBU(31.9);
+//        euro.getKursNBU();
+//
+//
+//        dollar.exchangeToUAH(1000);
+//        euro.exchangeToUAH(1000);
+//
+//        System.out.println("Dolar -> " + dollar.freeExchange());
+//        System.out.println("Euro -> " + euro.freeExchange());
 
 
-        Matrix matrix = new Matrix();
-        System.out.println("Matrix with null");
-        matrix.displayMatrix(5, matrix.matrixWithNull(5));
-        System.out.println();
 
-        matrix.fillWithOneByDiagonSpravaNalevo(5, matrix.matrixWithNull(5) );
-        System.out.println();
 
-        matrix.fillWithOneByDiagonSlevaNapravo(5,matrix.matrixWithNull(5));
-        System.out.println();
+//        Matrix matrix = new Matrix();
+//        System.out.println("Matrix with null");
+//        matrix.displayMatrix(4, matrix.matrixInitialization(3));
+//        System.out.println();
+//        matrix.sendToFile(4, matrix.matrixInitialization(4));
+//
+//        matrix.fillWithOneByDiagonSpravaNalevo(2, matrix.matrixInitialization(4) );
+//        System.out.println();
+//
+//        matrix.fillWithOneByDiagonSlevaNapravo(2,matrix.matrixInitialization(4));
+//        System.out.println();
+//
+//        Factorial.factorial(1000);
+//
+//        Bird bird = new Bird(2.34, "Bird", "red");
+//        bird.makeSound("Bird");
+//        bird.poletOpportunity();
+//
+//        Fish fish = new Fish(5.00,"Fish","blue");
+//        fish.makeSound("Fish");
+//        fish.bulkToDeep(90);
+//
+//        Dog dog = new Dog(4.93,"Dog", "yellow");
+//        dog.makeSound("Dog");
+//        //--------
+//
+//        Map<String, Integer> myMap = new HashMap<>();
+//        myMap.put("test", 545);
+//        System.out.println("Map = " + myMap);
+//        myMap.put("test1", 77);
+//        System.out.println("Value = " +myMap.get("test"));
+//
+//        List<String> myList = new ArrayList<>();
+//
+//        myList.add("test");
 
-        Factorial.factorial(3);
+
+
+        Logger logger = Logger.getLogger("TestOutput");//аналлог того как мы обычн создаем обьекты, в скобказ указаываем класс в котором он бедт работать
+        logger.debug("Debug Info");
+        logger.error("Error info");
+        logger.info("Info");
+
+
 
 
 
