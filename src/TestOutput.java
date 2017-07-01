@@ -1,6 +1,7 @@
-import libs.Calc;
-import libs.FullCalc;
-import org.apache.log4j.Logger;
+import libs.WorkWithList;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class TestOutput {
@@ -20,7 +21,7 @@ public class TestOutput {
 //
 //        System.out.println(var1 + " "+varString+" "+ var2);
 
-        Calc calc = new Calc();
+       // Calc calc = new Calc();
 //        calc.sum(var1,var2);
 //        calc.sum("test", 11);
 //
@@ -82,11 +83,11 @@ public class TestOutput {
 //            System.out.println(intArray[0] +"  > 10");
 
 
-        int[] intArrayForCheck = {2, 4, 26, 28, 10, 20, 33};
-
-        FullCalc fullCalc = new FullCalc();
-        fullCalc.printArrayWithConditions(intArrayForCheck);
-        fullCalc.printArrayWithCondition(intArrayForCheck, 10);
+//        int[] intArrayForCheck = {2, 4, 26, 28, 10, 20, 33};
+//
+//        FullCalc fullCalc = new FullCalc();
+//        fullCalc.printArrayWithConditions(intArrayForCheck);
+//        fullCalc.printArrayWithCondition(intArrayForCheck, 10);
 
 
 //            for (int i=0; i<intArray.length; i++){
@@ -181,12 +182,30 @@ public class TestOutput {
 
 
 
-        Logger logger = Logger.getLogger("TestOutput");//аналлог того как мы обычн создаем обьекты, в скобказ указаываем класс в котором он бедт работать
-        logger.debug("Debug Info");
-        logger.error("Error info");
-        logger.info("Info");
+//        Logger logger = Logger.getLogger("TestOutput");//аналлог того как мы обычн создаем обьекты, в скобказ указаываем класс в котором он бедт работать
+//        logger.debug("Debug Info");
+//        logger.error("Error info");
+//        logger.info("Info");
 
 
+
+     //   и имплиментировать методы так, что бы  код с основной программы
+
+        WorkWithList workWithList = new WorkWithList();
+        List<List<String>> ourList = new ArrayList<>();
+        
+        workWithList.addNewList(ourList);
+        ourList = workWithList.addValueToListList(0,"test01",ourList);
+
+        workWithList.addNewList(ourList);
+        ourList = workWithList.addValueToListList(1,"test11",ourList);
+        ourList = workWithList.addValueToListList(1,"test12",ourList);
+        ourList = workWithList.addValueToListList(0,"test02",ourList);
+
+        workWithList.addNewList(ourList);
+        workWithList.addValueToListList(2,"test21", ourList);
+        workWithList.addValueToListList(1,"test13", ourList);
+        workWithList.printListList(ourList);
 
 
 
